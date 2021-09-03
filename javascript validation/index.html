@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="text/index.js"></script>
+    <link rel="stylesheet" href="app.css">
+
+</head>
+<body>
+    
+    <script>  
+        function validate(){  
+        var name=document.f1.name.value;  
+        var password=document.f1.password.value;  
+        var status=false;  
+          
+        if(name.length<1){  
+        document.getElementById("nameloc").innerHTML=  "Please enter your name";  
+        
+        status=false;  
+        }else{  
+        document.getElementById("nameloc").innerHTML=" ";  
+        status=true;  
+        }  
+        if(password.length<6){  
+        document.getElementById("passwordloc").innerHTML=   "  Password must be at least 6 char long"; 
+        
+        status=false;  
+        }else{  
+        document.getElementById("passwordloc").innerHTML=" ";  
+        }  
+        return status;  
+        }  
+        </script>  
+          
+        <form name="f1" action="#" onsubmit="return validate()">  
+         
+        <label for="">Enter Name : </label> <br>
+        <input type="text" name="name"/>  
+        <div id="nameloc" style="color: red;">
+        </div>
+        <br>
+        <label for="">Enter Password:  </label> <br>
+        <input type="password" id="password">
+        <div id="passwordloc" style="color: red;"></div>
+        <br>
+        <button type="submit">Submit</button>
+         
+        
+        </form>  
+</body>
+</html>
